@@ -18,6 +18,9 @@ importers:
         specifier: ^18.2.0
         version: 18.3.1(react@18.3.1)
     devDependencies:
+      '@storybook/addon-a11y':
+        specifier: ^8.3.6
+        version: 8.3.6(storybook@8.3.6)
       '@storybook/addon-essentials':
         specifier: ^8.3.2
         version: 8.3.6(storybook@8.3.6)
@@ -671,6 +674,11 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@storybook/addon-a11y@8.3.6':
+    resolution: {integrity: sha512-EeVzUN+WaLtz/DXVBL3rIGvP8+pTuJXA3lEz9CbTQXRO7QMhzTTXLKmp8xmSA2w5H01a8XpjLcZ5LYjdKrvw0g==}
+    peerDependencies:
+      storybook: ^8.3.6
+
   '@storybook/addon-actions@8.3.6':
     resolution: {integrity: sha512-nOqgl0WoZK2KwjaABaXMoIgrIHOQl9inOzJvqQau0HOtsvnXGXYfJXYnpjZenoZDoZXKbUDl0U2haDFx2a2fJw==}
     peerDependencies:
@@ -1135,6 +1143,10 @@ packages:
   available-typed-arrays@1.0.7:
     resolution: {integrity: sha512-wvUjBtSGN7+7SjNpq/9M2Tg350UZD3q62IFZLbRAR1bSMlCo1ZaeW+BJ+D090e4hIIZLBcTDWe4Mh4jvUDajzQ==}
     engines: {node: '>= 0.4'}
+
+  axe-core@4.10.1:
+    resolution: {integrity: sha512-qPC9o+kD8Tir0lzNGLeghbOrWMr3ZJpaRlCIb6Uobt/7N4FiEDvqUMnxzCHRHmg8vOg14kr5gVNyScRmbMaJ9g==}
+    engines: {node: '>=4'}
 
   balanced-match@1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
@@ -3215,6 +3227,12 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.24.0':
     optional: true
 
+  '@storybook/addon-a11y@8.3.6(storybook@8.3.6)':
+    dependencies:
+      '@storybook/addon-highlight': 8.3.6(storybook@8.3.6)
+      axe-core: 4.10.1
+      storybook: 8.3.6
+
   '@storybook/addon-actions@8.3.6(storybook@8.3.6)':
     dependencies:
       '@storybook/global': 5.0.0
@@ -3851,6 +3869,8 @@ snapshots:
   available-typed-arrays@1.0.7:
     dependencies:
       possible-typed-array-names: 1.0.0
+
+  axe-core@4.10.1: {}
 
   balanced-match@1.0.2: {}
 
